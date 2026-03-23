@@ -1,0 +1,28 @@
+{
+  "manifest_version": 3,
+  "name": "MRfilter",
+  "version": "2.0",
+
+  "description": "Filter ass from sea. From ColdHand",
+
+  "icons": {
+    "48": "icons/ff-48.png"
+  },
+  "permissions": ["scripting", "activeTab"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "beastify@mozilla.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  
+  
+  "content_scripts": [
+    {
+      "js": ["content.js"],
+      "matches": ["*://*.mangaread.org/"]
+    }
+  ]
+}
