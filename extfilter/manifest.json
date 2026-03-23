@@ -1,0 +1,27 @@
+{
+  "manifest_version": 2,
+  "name": "Extfilter",
+  "version": "1.0",
+
+  "description": "Filter ass from sea.",
+
+  "icons": {
+    "48": "icons/ff-48.png"
+  },
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "beastify@mozilla.org",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mangaread.org/*"],
+      "js": ["Extfilter.js"]
+    }
+  ]
+}
