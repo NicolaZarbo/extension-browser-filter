@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Extfilter",
   "version": "1.0",
 
@@ -8,7 +8,7 @@
   "icons": {
     "48": "icons/ff-48.png"
   },
-
+  "permissions": ["scripting", "activeTab"],
   "browser_specific_settings": {
     "gecko": {
       "id": "beastify@mozilla.org",
@@ -17,11 +17,12 @@
       }
     }
   },
-
+  
+  
   "content_scripts": [
     {
-      "matches": ["*://*.mangaread.org/*"],
-      "js": ["Extfilter.js"]
+      "js": ["content.js"],
+      "matches": ["*://*.mangaread.org/"]
     }
   ]
 }
